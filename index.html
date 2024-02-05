@@ -90,7 +90,7 @@
     </div>
     <form id="form">
         <h1>Заполнение данных</h1>
-        <input type="text" placeholder="Телеграм юзер" id="user_username" readonly>
+        <input type="text" placeholder="Телеграм юзер" id="user_username">
         <input type="text" placeholder="Ваше имя" id="user_name">
         <input type="text" placeholder="Предложение или вопрос" id="user_text">
         <div id="error"></div>
@@ -106,7 +106,7 @@
         start.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_username").value = tg.initDataUnsafe.user.username + "" + tg.initDataUnsafe.user.id
+            document.getElementById("user_username").value = tg.initDataUnsafe.user.id
         });
 
         send.addEventListener("click", () => {

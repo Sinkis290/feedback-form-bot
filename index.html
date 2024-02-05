@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Фидбек форма</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
         * {
             margin: 0;
@@ -34,8 +34,8 @@
         }
 
         img {
-            width: 70px;
-            margin: 30px auto;
+            width: 100px;
+            margin: 50px auto;
         }
 
         p {
@@ -84,13 +84,13 @@
 <body>
     <div id="main">
         <h1>Фидбек форма</h1>
-        <img src="https://w7.pngwing.com/pngs/973/184/png-transparent-apple-color-emoji-iphone-woman-emojipedia-emoji-face-eye-apple.png">
+        <img src="https://file.removal.ai/preview/a95fc4c7-8a2f-463b-89c1-af90d4b82a30-channels4_profile.png">
         <p>Нажмите на кнопку "Начать" и введите данные</p>
         <button id="start">Начать</button>
     </div>
     <form id="form">
         <h1>Заполнение данных</h1>
-        <input type="text" placeholder="Телеграм юзер" id="user_username">
+        <input type="text" placeholder="Телеграм юзер" id="user_username" readonly>
         <input type="text" placeholder="Ваше имя" id="user_name">
         <input type="text" placeholder="Предложение или вопрос" id="user_text">
         <div id="error"></div>
@@ -106,7 +106,7 @@
         start.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_username").value = tg.initDataUnsafe.user.username + "" + tg.initDataUnsafe.user.last_name
+            document.getElementById("user_username").value = tg.initDataUnsafe.user.username + "" + tg.initDataUnsafe.user.id
         });
 
         send.addEventListener("click", () => {

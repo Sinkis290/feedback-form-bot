@@ -106,7 +106,7 @@
         start.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_username").value = tg.initDataUnsafe.user.username;
+            document.getElementById("user_username").value = tg.initDataUnsafe.user.first_name + "" + tg.initDataUnsafe.user.last_name;
         });
 
         send.addEventListener("click", () => {

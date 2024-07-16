@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Фидбек форма</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
         * {
             margin: 0;
@@ -16,7 +16,7 @@
         }
 
         body{
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Nunito', sans-serif;
             font-weight: 300;
             color: var(--tg-theme-text-color);
             background: var(tg-theme-bg-color);
@@ -84,7 +84,7 @@
 <body>
     <div id="main">
         <h1>Фидбек форма</h1>
-        <img src="https://file.removal.ai/preview/a95fc4c7-8a2f-463b-89c1-af90d4b82a30-channels4_profile.png">
+        <img src="https://emojigraph.org/media/apple/books_1f4da.png">
         <p>Нажмите на кнопку "Начать" и введите данные</p>
         <button id="start">Начать</button>
     </div>
@@ -106,7 +106,7 @@
         start.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_username").value = tg.initDataUnsafe.user.first_name + "" + tg.initDataUnsafe.user.last_name;
+            document.getElementById("user_username").value = tg.initDataUnsafe.user.username + "" + tg.initDataUnsafe.user.id;
         });
 
         send.addEventListener("click", () => {
